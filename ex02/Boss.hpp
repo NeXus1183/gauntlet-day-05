@@ -13,10 +13,17 @@ public:
     }
     std::string describe() const override
     {
-        std::string toDisplay = m_name + " (hp " + std::to_string(m_hp) + ")";
-        return toDisplay;
+        return "Boss (hp 300)";
     }
-    ~Boss(){};
+    int hp() const
+    { 
+        return 300; 
+    }
+    void accept(Visitor& v) override
+    { 
+        v.visit(*this); 
+    } 
+    ~Boss(){}
 private:
     std::string m_name;
     int m_hp;

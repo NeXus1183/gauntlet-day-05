@@ -1,12 +1,12 @@
 # The binary this exercise builds
-NAME := save
+NAME := visit
 
 # Compiler and the gauntlet's mandatory flags
 CXX      := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++17
 
 # List every .cpp file in the exercise here
-SRCS := main.cpp Checksum.cpp Compressor.cpp SaveGameFacade.cpp Serializer.cpp Writer.cpp
+SRCS := main.cpp 
 OBJS := $(SRCS:.cpp=.o)
 
 # `make` / `make all`: build the binary
